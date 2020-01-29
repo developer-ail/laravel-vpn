@@ -16,5 +16,9 @@ Route::get('/', function () {
 });
 
 Route::get('/ejemplo', function() {
-    return 'Hola Mundo desde un local hacia un vpn';
+    
+    $pdf = App::make('dompdf.wrapper');
+    $pdf->loadHTML('<h1>Test</h1>');
+    return $pdf->stream();
+    
 });
