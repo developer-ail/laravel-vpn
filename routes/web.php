@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/ejemplo', function() {
+    return 'Hola Mundo desde un local hacia un vpn';
+});
